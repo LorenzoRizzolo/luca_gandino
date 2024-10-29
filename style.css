@@ -221,8 +221,11 @@ main div.animate.right .content *{
     align-items: center;
     justify-content: space-between;
 }
-.panel .navbar > div{
+.panel .navbar > *{
     padding: 10px;
+}
+.panel img{
+    width: 100px;   
 }
 .panel button{
     padding: 10px;
@@ -233,6 +236,10 @@ main div.animate.right .content *{
     border: 0;
     background-color: white;
     transition: 0.3s;
+}
+.panel button > *{
+    display: flex;
+    align-items: center;
 }
 .panel button:hover{
     cursor: pointer;
