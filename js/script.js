@@ -5,10 +5,17 @@ $(document).ready(()=>{
         $(".panel").removeClass("hide")
         $(".panel").addClass("show")
     }
-    console.log($("header").height())
-    $(".panel .navbar").css({
-        "height":$("header").height()
-    })
+    function updateNavbarHeight() {
+        const headerHeight = $("header").height();
+        $(".panel .navbar").css("height", headerHeight);
+    }
+    updateNavbarHeight();
+    setInterval(updateNavbarHeight, 200);
+})
+
+
+$("header").ready(()=>{
+    $(".panel .navbar").css({"height":$("header").height()})
 })
 
 $(document).on('scroll', () => {
