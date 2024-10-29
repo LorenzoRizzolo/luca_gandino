@@ -7,9 +7,19 @@
     --padding-top: 0px;
 }
 
+*{
+    overflow-x: hidden !important;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
 body {
     margin: 0;
     padding: 0;
+    width: 100vw;
 }
 
 header {
@@ -17,7 +27,7 @@ header {
     color: var(--box-tx-color);
     position: sticky;
     top: 0;
-    width: 100vw;
+    /* width: 100vw; */
     /* padding: 15px; */
     z-index: 1000;
     display: flex;
@@ -73,7 +83,7 @@ main {
 }
 
 main > div.animate {
-    padding: 20px;
+    /* padding: 20px; */
     text-align: center;
 }
 
@@ -81,17 +91,18 @@ main div:first-child {
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 main div:first-child img {
     max-width: 400px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 .scroll_top{
     position: fixed;
-    bottom: 40px;
-    right: 40px;
+    bottom: 30px;
+    right: 30px;
     cursor: pointer;
     background-color: var(--main-color);
     color: var(--box-tx-color);
@@ -107,8 +118,8 @@ main div:first-child img {
 }
 .scroll_top:hover{
     padding: 15px;
-    bottom: 37px;
-    right: 37px;
+    bottom: 27px;
+    right: 27px;
 }
 
 @media (max-width:630px){
