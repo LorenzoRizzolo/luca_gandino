@@ -28,12 +28,34 @@
     
     <header>
         <h1 class="title">Luca Gandino</h1>
-        <div class="menu">
+        <button class="menu"><span class="material-symbols-outlined">menu</span></button>
+        <!-- <div class="menu">
             <button class="scroll-btn" data-target="#about">About</button>
             <button class="scroll-btn" data-target="#contacts">Contacts</button>
             <button class="scroll-btn" data-target="#activities">BBB Activities</button>
-        </div>
+        </div> -->
     </header>
+
+    <div class="panel hide">
+        <div class="navbar">
+            <div>Pages index</div>
+            <div class="close"><span class="material-symbols-outlined">close</span></div>
+        </div>
+        <div class="pages">
+            <button class="scroll-btn" data-target="#about">
+                <div>About</div>
+                <span class="material-symbols-outlined">keyboard_arrow_right</span>
+            </button>
+            <button class="scroll-btn" data-target="#contacts">
+                <div>Contacts</div>
+                <span class="material-symbols-outlined">keyboard_arrow_right</span>
+            </button>
+            <button class="scroll-btn" data-target="#activities">
+                <div>BBB Activities</div>
+                <span class="material-symbols-outlined">keyboard_arrow_right</span>
+            </button>
+        </div>
+    </div>
 
     <main>
         <div>
@@ -125,6 +147,8 @@
         </div>
 
     </main>
+
+    <div class="scroll_top"><span class="material-symbols-outlined">arrow_upward</span></div>
 
     <script> AOS.init(); </script>
     <script src="js/script.js"></script>

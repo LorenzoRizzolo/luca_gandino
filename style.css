@@ -35,7 +35,7 @@ header {
     right: 0;
     /* width: 100vw; */
     /* padding: 15px; */
-    z-index: 1000;
+    z-index: 900;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,7 +188,54 @@ main div.animate.right .content *{
     padding-right: 10px;
     border-radius: 10px;
 }
+.panel{
+    transition: 0.3s;
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    z-index: 999;
+    color: var(--box-tx-color);
+    background-color: white;
+}
+.panel.show{
+    left: 0;
+    bottom: 0;
+    top: 0;
+}
+.panel.hide{
+    left: -300px;
+}
+.panel .navbar{
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.panel .navbar > div{
+    padding: 10px;
+}
+.panel button{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;
+    background-color: white;
+    transition: 0.3s;
+}
+.panel button:hover{
+    cursor: pointer;
+    background-color: lightgray !important;
+}
 
+button.menu{
+    display: none;
+    background-color: var(--main-color);
+    color: white;
+    border: 0;
+    size: 150%;
+}
 @media (max-width:630px){
     main div:first-child img {
         max-width: 80%;
@@ -203,5 +250,8 @@ main div.animate.right .content *{
     }
     main .content{
         font-size: 120%;
+    }
+    button.menu{
+        display: block;
     }
 }

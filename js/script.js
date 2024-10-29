@@ -1,3 +1,12 @@
+const isMobile = navigator.userAgentData.mobile;
+
+$(document).ready(()=>{
+    if(!isMobile){
+        $(".panel").removeClass("hide")
+        $(".panel").addClass("show")
+    }
+})
+
 $(document).on('scroll', () => {
     const scrollTop = $(document).scrollTop();
     // const documentHeight = $(document).height();
@@ -40,3 +49,26 @@ function copyDivToClipboard(text) {
     navigator.clipboard.writeText(text);
     alert("Numero di telefono copiato")
 }
+
+$(".menu").on("click", ()=>{
+    $(".panel").removeClass("hide")
+    $(".panel").addClass("show")
+    // if($(".panel").hasClass("hide")){
+    //     $(".panel").removeClass("hide")
+    //     $(".panel").addClass("show")
+    // }else{
+    //     $(".panel").removeClass("show")
+    //     $(".panel").addClass("hide")
+    // }
+})
+$(".close, .panel .pages button").on("click", ()=>{
+    $(".panel").removeClass("show")
+    $(".panel").addClass("hide")
+    // if(!$(".panel").hasClass("hide")){
+    //     $(".panel").removeClass("hide")
+    //     $(".panel").addClass("show")
+    // }else{
+    //     $(".panel").removeClass("show")
+    //     $(".panel").addClass("hide")
+    // }
+})
