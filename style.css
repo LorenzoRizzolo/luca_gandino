@@ -9,6 +9,10 @@
 
 *{
     overflow-x: hidden !important;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 html{
@@ -66,10 +70,6 @@ div.menu button{
     border: 0;
     color: white;
     font-size: 120%;
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
     cursor: pointer;
 }
 div.menu button:hover{
@@ -93,9 +93,18 @@ main > div.animate.right {
     text-align: right;
 }
 main > div.border{
-    border-bottom: 1px solid black;
+    border-top: 1px solid black;
     margin-top: 20px;
 }
+
+main > div.animate img{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 200px;
+}
+main > div.animate.left img{ float: left; }
+main > div.animate.right img{ float: right; }
 
 main div:first-child {
     text-align: center;
@@ -107,6 +116,21 @@ main div:first-child {
 main div:first-child img {
     max-width: 400px;
     /* margin-left: 20px; */
+}
+
+main div.animate.left .content ul li{
+    display: flex;
+    align-items: center;
+}
+main div.animate.left .content ul li span{
+    margin-right: 5px;
+    padding: 5px;
+}
+main div.animate.left .content *{
+    text-align: left !important;
+}
+main div.animate.right .content *{
+    text-align: right !important;
 }
 
 .scroll_top{
