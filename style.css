@@ -4,7 +4,7 @@
 :root {
     --main-color: rgb(26, 26, 26);
     --box-tx-color: white;
-    --padding-top: 110px;
+    --padding-top: 130px;
 }
 
 *{
@@ -41,7 +41,6 @@ header {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    height: 100px;
 }
 
 .center{
@@ -82,7 +81,6 @@ div.menu button{
     background-color: var(--main-color);
     border: 0;
     color: white;
-    font-size: 120%;
     cursor: pointer;
 }
 div.menu button:hover{
@@ -253,7 +251,7 @@ button.menu{
     border: 0;
     size: 150%;
 }
-@media (max-width:630px){
+@media (max-width:1300px){
     main div:first-child img {
         max-width: 80%;
     }
@@ -270,5 +268,13 @@ button.menu{
     }
     button.menu{
         display: block;
+    }
+}
+
+@media (min-width:1300px){
+    .panel{
+        left: 0 !important;
+        bottom: 0;
+        top: 0;
     }
 }
