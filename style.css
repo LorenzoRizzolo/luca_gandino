@@ -131,7 +131,6 @@ main div:first-child img {
 
 main .content{
     font-size: 150%;
-
 }
 main div.animate.left .content ul li{
     display: flex;
@@ -192,7 +191,7 @@ main div.animate.right .content *{
 
 @media (max-width:630px){
     main div:first-child img {
-        max-width: 60%;
+        max-width: 80%;
     }
     main div:not(:first-child){
         display: flex;
@@ -201,5 +200,8 @@ main div.animate.right .content *{
     }
     .contact .copy{
         margin-top: 10px;
+    }
+    main .content{
+        font-size: 120%;
     }
 }
