@@ -4,7 +4,7 @@
 :root {
     --main-color: rgb(26, 26, 26);
     --box-tx-color: white;
-    --padding-top: 0px;
+    --padding-top: 120px;
 }
 
 *{
@@ -31,7 +31,7 @@ header {
     color: var(--box-tx-color);
     position: sticky;
     top: 0;
-    /* width: 100vw; */
+    width: 100vw;
     /* padding: 15px; */
     z-index: 1000;
     display: flex;
@@ -52,7 +52,7 @@ header h1 {
 }
 header h1 img {
     width: 0px; /* Rendi visibile l'immagine con una larghezza iniziale */
-    margin-left: 15px;
+    /* margin-left: 15px;    */
 }
 
 .title{
@@ -82,7 +82,10 @@ main {
     margin: auto;
     padding-bottom: 100px;
 }
-
+main > div.animate{
+    padding-left: 20px;
+    padding-right: 20px;
+}
 main > div.animate .title {
     text-align: center;
 }
