@@ -4,7 +4,7 @@
 :root {
     --main-color: rgb(26, 26, 26);
     --box-tx-color: white;
-    --padding-top: 140px;
+    --padding-top: 110px;
 }
 
 *{
@@ -41,6 +41,11 @@ header {
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    height: 100px;
+}
+
+.center{
+    text-align: center;
 }
 
 header * {
@@ -108,11 +113,14 @@ main > div.border{
     margin-top: 20px;
 }
 
-main > div.animate img{
+main > div.animate img:not(.no_radius){
     width: 200px;
     height: 200px;
     margin: 10px;
     border-radius: 200px;
+}
+main > div.animate img.no_radius{
+    width: 200px;
 }
 main > div.animate.left img{ float: left; }
 main > div.animate.right img{ float: right; }
@@ -181,7 +189,6 @@ main div.animate.right .content *{
     font-size: 120%;
 }
 .contact .copy{
-    background-color: lightgray;
     cursor: pointer;
     padding: 5px;
     padding-left: 10px;
@@ -196,6 +203,9 @@ main div.animate.right .content *{
     z-index: 999;
     color: var(--box-tx-color);
     background-color: white;
+}
+.panel *{
+    font-size: 110% !important;
 }
 .panel.show{
     left: 0;

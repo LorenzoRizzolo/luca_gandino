@@ -44,31 +44,19 @@ $(".scroll_top").on("click", ()=>{
     }, 800); // 800 millisecondi per l'animazione, puoi cambiare il tempo se vuoi
 })
 
-function copyDivToClipboard(text) {
-    console.log(text)
+function copyDivToClipboard(text, alert_m) {
+    console.log(alert_m)
     navigator.clipboard.writeText(text);
-    alert("Numero di telefono copiato")
+    alert(alert_m)
 }
 
 $(".menu").on("click", ()=>{
     $(".panel").removeClass("hide")
     $(".panel").addClass("show")
-    // if($(".panel").hasClass("hide")){
-    //     $(".panel").removeClass("hide")
-    //     $(".panel").addClass("show")
-    // }else{
-    //     $(".panel").removeClass("show")
-    //     $(".panel").addClass("hide")
-    // }
 })
 $(".close, .panel .pages button").on("click", ()=>{
-    $(".panel").removeClass("show")
-    $(".panel").addClass("hide")
-    // if(!$(".panel").hasClass("hide")){
-    //     $(".panel").removeClass("hide")
-    //     $(".panel").addClass("show")
-    // }else{
-    //     $(".panel").removeClass("show")
-    //     $(".panel").addClass("hide")
-    // }
+    if(isMobile){
+        $(".panel").removeClass("show")
+        $(".panel").addClass("hide")
+    }
 })
