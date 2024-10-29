@@ -34,3 +34,9 @@ $(".scroll_top").on("click", ()=>{
         scrollTop: 0
     }, 800); // 800 millisecondi per l'animazione, puoi cambiare il tempo se vuoi
 })
+
+function copyDivToClipboard(text) {
+    console.log(text)
+    navigator.clipboard.writeText(text);
+    alert("Numero di telefono copiato")
+}
