@@ -4,7 +4,7 @@
 :root {
     --main-color: rgb(26, 26, 26);
     --box-tx-color: white;
-    --padding-top: 120px;
+    --padding-top: 140px;
 }
 
 *{
@@ -29,9 +29,11 @@ body {
 header {
     background-color: var(--main-color);
     color: var(--box-tx-color);
-    position: sticky;
+    position: fixed;
     top: 0;
-    width: 100vw;
+    left: 0;
+    right: 0;
+    /* width: 100vw; */
     /* padding: 15px; */
     z-index: 1000;
     display: flex;
@@ -121,6 +123,10 @@ main div:first-child img {
     /* margin-left: 20px; */
 }
 
+main .content{
+    font-size: 150%;
+
+}
 main div.animate.left .content ul li{
     display: flex;
     align-items: center;
