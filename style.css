@@ -71,7 +71,7 @@ header h1 img {
 hr{
     width: 70%;
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 div.menu{
@@ -234,6 +234,7 @@ main div.animate.right .content *{
     border: 0;
     background-color: white;
     transition: 0.3s;
+    color: black;
 }
 .panel button > *{
     display: flex;
@@ -251,6 +252,13 @@ button.menu{
     border: 0;
     size: 150%;
 }
+
+.no-scroll {
+    overflow: hidden !important;
+}
+
+
+/* da telefono */
 @media (max-width:1300px){
     main div:first-child img {
         max-width: 80%;
@@ -271,10 +279,12 @@ button.menu{
     }
 }
 
+/* da pc */
 @media (min-width:1300px){
     .panel{
         left: 0 !important;
         bottom: 0;
         top: 0;
     }
+    .panel .close{ display: none; }
 }
