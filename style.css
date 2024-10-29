@@ -194,9 +194,12 @@ main div.animate.right .content *{
     main div:first-child img {
         max-width: 60%;
     }
-    main div{
+    main div:not(:first-child){
         display: flex;
         align-items: center;
         flex-direction: column;
+    }
+    .contact .copy{
+        margin-top: 10px;
     }
 }
