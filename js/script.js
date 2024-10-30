@@ -29,9 +29,25 @@ $(document).on('scroll', () => {
 
 $('.scroll-btn').on('click', function() {
     const target = $(this).data('target');
+    $('.scroll-btn').removeClass('selected');
+    $(this).addClass('selected');
     $('html, body').animate({
-        scrollTop: $(target).offset().top - 200
+        scrollTop: $(target).offset().top - $("header").height()
     }, 800);
+});
+$(window).on('scroll', function() {
+    $('.scroll-btn').each(function() {
+        const target = $($(this).data('target'));
+        const targetTop = target.offset().top - $("header").height()-50;
+        const targetBottom = targetTop + target.outerHeight();
+        const scrollPosition = $(window).scrollTop();
+
+        if (scrollPosition >= targetTop && scrollPosition < targetBottom) {
+            // Aggiunge la classe .selected al pulsante corrispondente
+            $('.scroll-btn').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    });
 });
 
 $(".scroll_top").on("click", () => {

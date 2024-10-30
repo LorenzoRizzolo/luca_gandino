@@ -255,7 +255,7 @@ main div.animate.right .content *{
     display: flex;
     align-items: center;
 }
-.panel button:hover{
+.panel button:hover, .selected{
     cursor: pointer;
     background-color: lightgray !important;
 }
@@ -266,6 +266,7 @@ button.menu{
     color: white;
     border: 0;
     size: 150%;
+    cursor: pointer;
 }
 
 .no-scroll {
@@ -289,7 +290,6 @@ button.menu{
     height: 100%;
 }
 
-
 /* da telefono */
 @media (max-width:1300px){
     main div:first-child img {
@@ -308,6 +308,12 @@ button.menu{
     }
     button.menu{
         display: block;
+    }
+    header{
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+        flex-direction: row-reverse;
     }
 }
 
